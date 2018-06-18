@@ -7,4 +7,10 @@
   UDP:非面向连接，效率高<br>
   
 ![avatar](https://github.com/SmallNancy/trueChain/blob/master/picture/net7.png) 
-
+2. 传输 先封装，后拆分
+### 类
+  1. InetAddress  InetSocketAddress
+  2. URL 
+  3. TCP:ServerSocket Socket
+  4. UDP :DatagramPacket
+  
