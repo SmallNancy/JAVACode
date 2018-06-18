@@ -6,3 +6,5 @@
   TCP：面向连接，安全，效率低<br>
   UDP:非面向连接，效率高<br>
   
+![avatar](https://github.com/SmallNancy/trueChain/blob/master/picture/net7.png) 
+
