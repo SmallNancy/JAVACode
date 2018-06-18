@@ -13,4 +13,7 @@
   2. URL 
   3. TCP:ServerSocket Socket
   4. UDP :DatagramPacket
+## 获取资源网络流
+1. InputStream 可能有乱码
+2.输入缓冲流和输出缓冲流BufferedReader BufferedWriter 无乱码
   
