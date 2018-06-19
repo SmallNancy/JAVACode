@@ -1,6 +1,6 @@
 # UDP以接收数据为中心   非面向连接 不安全，数据可能丢失，但是效率高
 
-**  一、类DatagramSocket DatagramPacket  **
+*  一、类DatagramSocket DatagramPacket   *
 
 1. 客户端
   * 创建客户端 DatagramSocket 类+指定端口
