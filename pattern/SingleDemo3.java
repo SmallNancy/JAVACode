@@ -1,8 +1,8 @@
 package singleton;
 /**
- * ²âÊÔ¾²Ì¬ÄÚ²¿ÀàÊµÏÖ·½Ê½µÄµ¥ÀıÄ£Ê½
- * ¼ÓÔØÀàÊ±£¬ÌìÈ»µÄÏß³Ì°²È«,µ÷ÓÃĞ§ÂÊ¸ß£¬Ò²ÑÓ³Ù¼ÓÔØ
- * ×îÓÅ
+ * æµ‹è¯•é™æ€å†…éƒ¨ç±»å®ç°æ–¹å¼çš„å•ä¾‹æ¨¡å¼
+ * åŠ è½½ç±»æ—¶ï¼Œå¤©ç„¶çš„çº¿ç¨‹å®‰å…¨,è°ƒç”¨æ•ˆç‡é«˜ï¼Œä¹Ÿå»¶è¿ŸåŠ è½½
+ * æœ€ä¼˜
  * @author small
  *
  */
@@ -11,11 +11,11 @@ public class SingleDemo3 {
 		 private static final SingleDemo3 instance = new SingleDemo3();
 	}
 	
-    //Ë½ÓĞ¹¹ÔìÆ÷
+    //ç§æœ‰æ„é€ å™¨
 	 private SingleDemo3() {
 		 
 	 }
-	 //·½·¨Ã»ÓĞÍ¬²½£¬µ÷ÓÃĞ§ÂÊ¸ß
+	 //æ–¹æ³•æ²¡æœ‰åŒæ­¥ï¼Œè°ƒç”¨æ•ˆç‡é«˜ï¼Œå»¶è¿ŸåŠ è½½
 	 public static SingleDemo3 getInstance() {
 		 return SingletonClassInstance.instance;
 	 }
