@@ -1,14 +1,13 @@
-package proxy;
+package dynamicProxy;
+
+import java.lang.reflect.Proxy;
 
 public class Client {
 	public static void main(String[] args) {
 		Star real = new RealStar();
-	    Star proxy = new ProxyStar(real);
-	    proxy.conger();
-	    proxy.signContract();
-	    proxy.bookTicket();
-	    proxy.sing();
-	    proxy.collectMoney();
+		StarHandler handle = new StarHandler(real);
+		Star proxy = (Star)Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class<?>[]{Star.class}, handle);
+		proxy.sing();
 	}
-    
+
 }

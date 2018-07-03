@@ -1,28 +1,7 @@
-package proxy;
-/**
- * 抽象接口定义6个方法
- * @author small
- *
- */
+package dynamicProxy;
+
 public interface Star {
-	/**
-	 * 面谈
-	 */
-    void conger();
-    /**
-     * 签合同
-     */
-    void  signContract();
-    /**
-     * 订票
-     */
+    void signContract();
     void bookTicket();
-    /**
-     * 唱歌
-     */
     void sing();
-    /**
-     * 收钱
-     */
-    void collectMoney();
 }
