@@ -7,20 +7,20 @@ import java.sql.SQLException;
 public class Demo01 {
 	public static void main(String[] args) {
 		Connection conn = null;
-			//×°ÔØMySqlÇı¶¯
+			//è£…è½½MySqlé©±åŠ¨
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				long start =System.currentTimeMillis();
 				
 				/**
-				 * ½¨Á¢Á¬½Ó(Á¬½Ó¶ÔÏóÄÚ²¿ÆäÊµ°üº¬ÁËSocket¶ÔÏó£¬ÊÇÒ»¸öÔ¶³ÌÁ¬½Ó£¬±È½ÏºÄÊ±)
-				 * mysql 8.0ÒÔÉÏ°æ±¾ĞèÒªuseSSL=false&serverTimezone=UTC£¬²Å¿ÉÒÔ
+				 * å»ºç«‹è¿æ¥(è¿æ¥å¯¹è±¡å†…éƒ¨å…¶å®åŒ…å«äº†Socketå¯¹è±¡ï¼Œæ˜¯ä¸€ä¸ªè¿œç¨‹è¿æ¥ï¼Œæ¯”è¾ƒè€—æ—¶)
+				 * mysql 8.0ä»¥ä¸Šç‰ˆæœ¬éœ€è¦useSSL=false&serverTimezone=UTCï¼Œæ‰å¯ä»¥
 				 */
 				
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/mytest?useSSL=false&serverTimezone=UTC","root","123456");
 				long end = System.currentTimeMillis();
 				System.out.println(conn);
-				System.out.println("½¨Á¢Á¬½ÓºÄÊ±£º" + (end-start) + "ms");
+				System.out.println("å»ºç«‹è¿æ¥è€—æ—¶ï¼š" + (end-start) + "ms");
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -29,4 +29,5 @@ public class Demo01 {
 				e.printStackTrace();
 			}
 	}
+	
 }
