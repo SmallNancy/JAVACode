@@ -5,27 +5,27 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 /**
- * StatementÓÃ·¨
- * ²âÊÔSQL×¢Èë
+ * Statementç”¨æ³•
+ * æµ‹è¯•SQLæ³¨å…¥
  * @author Small
  *
  */
 public class Demo02 {
 	public static void main(String[] args) {
 		Connection conn = null;
-			//×°ÔØMySqlÇı¶¯
+			//è£…è½½MySqlé©±åŠ¨
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				/**
-				 * ½¨Á¢Á¬½Ó(Á¬½Ó¶ÔÏóÄÚ²¿ÆäÊµ°üº¬ÁËSocket¶ÔÏó£¬ÊÇÒ»¸öÔ¶³ÌÁ¬½Ó£¬±È½ÏºÄÊ±)
-				 * mysql 8.0ÒÔÉÏ°æ±¾ĞèÒªuseSSL=false&serverTimezone=UTC£¬²Å¿ÉÒÔ
+				 * å»ºç«‹è¿æ¥(è¿æ¥å¯¹è±¡å†…éƒ¨å…¶å®åŒ…å«äº†Socketå¯¹è±¡ï¼Œæ˜¯ä¸€ä¸ªè¿œç¨‹è¿æ¥ï¼Œæ¯”è¾ƒè€—æ—¶)
+				 * mysql 8.0ä»¥ä¸Šç‰ˆæœ¬éœ€è¦useSSL=false&serverTimezone=UTCï¼Œæ‰å¯ä»¥
 				 */
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/teacher?useSSL=false&serverTimezone=UTC","root","123456");
 				Statement stmt = conn.createStatement();
-				String sql = "INSERT INTO department(id,depName) VALUES(06,'µ÷ÑĞ²¿')";
+				String sql = "INSERT INTO department(id,depName) VALUES(06,'è°ƒç ”éƒ¨')";
 				stmt.execute(sql);
 				System.out.println(conn);
-				//²âÊÔSQL×¢Èë
+				//æµ‹è¯•SQLæ³¨å…¥
 //				String sql = "delete from department where id=6";
 //				stmt.execute(sql);
 			} catch (ClassNotFoundException e) {
@@ -36,4 +36,5 @@ public class Demo02 {
 				e.printStackTrace();
 			}
 	}
+	
 }
