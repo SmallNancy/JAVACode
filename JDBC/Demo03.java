@@ -6,23 +6,23 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 /**
- * PreparedStatementÓÃ·¨
- * ·ÀÖ¹SQL×¢Èë
+ * PreparedStatementç”¨æ³•
+ * é˜²æ­¢SQLæ³¨å…¥
  * @author Small
  *
  */
 public class Demo03 {
 	public static void main(String[] args) {
 		Connection conn = null;
-			//×°ÔØMySqlÇı¶¯
+			//è£…è½½MySqlé©±åŠ¨
 			try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/teacher?useSSL=false&serverTimezone=UTC","root","123456");
-				//VALUES(?,?) Õ¼Î»·û,·ÀÖ¹SQL×¢Èë
+				//VALUES(?,?) å ä½ç¬¦,é˜²æ­¢SQLæ³¨å…¥
 				String sql ="INSERT INTO department(id,depName) VALUES(?,?)";
 				PreparedStatement ps = conn.prepareStatement(sql);
-				ps.setObject(1, 05);//´«ÈëÖµ,µÚÒ»¸ö²ÎÊı
-				ps.setObject(2, "hello");//´«ÈëÖµ,µÚ2¸ö²ÎÊı
+				ps.setObject(1, 05);//ä¼ å…¥å€¼,ç¬¬ä¸€ä¸ªå‚æ•°
+				ps.setObject(2, "hello");//ä¼ å…¥å€¼,ç¬¬2ä¸ªå‚æ•°
 				ps.execute();
 			} catch (ClassNotFoundException e) {
 				// TODO Auto-generated catch block
@@ -31,5 +31,6 @@ public class Demo03 {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		
 	}
 }
