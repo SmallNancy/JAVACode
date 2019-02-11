@@ -6,39 +6,40 @@ package cn.nancy.IO;
  */
 public class Decorate {
   public static void main(String[] args) {
-    Person p = new Person();
-    p.voice();
-    newPer np = new newPer(p);
-    np.voice();
+   Person p = new Person();
+   p.say();
+   exPerson ex = new exPerson(p);
+   ex.say();
 	}
 }
 
-interface say{
-	void voice();
+// 抽象组件
+interface Say{
+	void say();
+}
+class Person implements Say{
+  private int voice = 10;
+  
+	public int getVoice() {
+		return voice;
+	}
+	public void setVoice(int voice) {
+		this.voice = voice;
+	}
+	@Override
+	public void say() {
+		System.out.println("人的声音：" + this.getVoice());
+	}
+	
 }
 
-class Person implements say{
-	private int degree = 10;
-	@Override
-	public void voice() {
-		System.out.println(this.getDegree());
-	}
-	public int getDegree() {
-		return degree;
-	}
-	public void setDegree(int degree) {
-		this.degree = degree;
-	}
-	
-}
-class newPer implements say{
-  Person p = new Person();
-  newPer( Person p) {
-  	this.p = p;
+class exPerson extends Person{
+	Person p = new Person();
+	public exPerson(Person p) {
+		this.p = p;
 	}
 	@Override
-	public void voice() {
-		System.out.println(p.getDegree()*100);
+	public void say() {
+		System.out.println("人的声音：" + p.getVoice() * 100);
 	}
-	
 }
