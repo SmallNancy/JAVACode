@@ -7,7 +7,7 @@ package cn.nancy.proxy;
  */
 public class StaticProxy {
   public static void main(String[] args) {
-		new proxy(new You()).marry();
+		new proxy1(new You()).marry();
 		//new Thread(线程对象).start();
 	}
 }
@@ -25,9 +25,9 @@ class You implements wedding{
 	
 }
 //代理角色
-class proxy implements wedding{
+class proxy1 implements wedding{
   private wedding target;
-	public proxy(wedding target) {
+	public proxy1(wedding target) {
 		super();
 		this.target = target;
 	}
